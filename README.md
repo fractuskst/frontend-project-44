@@ -18,28 +18,28 @@ npm link
 ### Описание игры:
 Пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное.
 ### Запуск игры: __"brain-even"__
-[![asciicast](https://asciinema.org/a/aQPROcv1sI6gR3vx4FiUbAI5v.svg)](https://asciinema.org/a/aQPROcv1sI6gR3vx4FiUbAI5v)
+[![asciicast](https://asciinema.org/a/643088.svg)](https://asciinema.org/a/643088)
 
 ## Игра "Калькулятор"
 ### Описание игры:
 Пользователю показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
 ### Запуск игры: __"brain-calc"__
-[![asciicast](https://asciinema.org/a/pYtXRHhxYqbgH4hr394psurR1.svg)](https://asciinema.org/a/pYtXRHhxYqbgH4hr394psurR1)
+[![asciicast](https://asciinema.org/a/642374.svg)](https://asciinema.org/a/642374)
 
 ## Игра "НОД"
 ### Описание игры:
 Пользователю показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
 ### Запуск игры: __"brain-gcd"__
-[![asciicast](https://asciinema.org/a/eNYWokhEfE1t7hKhxPmT08Sge.svg)](https://asciinema.org/a/eNYWokhEfE1t7hKhxPmT08Sge)
+[![asciicast](https://asciinema.org/a/642843.svg)](https://asciinema.org/a/642843)
 
 ## Игра "Арифметическая прогрессия"
 ### Описание игры:
 Пользователю показывается ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Игрок должен определить это число.
 ### Запуск игры: __"brain-progression"__
-[![asciicast](https://asciinema.org/a/BrRfjUKEsnQ9sV4Gtyao6a7BH.svg)](https://asciinema.org/a/BrRfjUKEsnQ9sV4Gtyao6a7BH)
+[![asciicast](https://asciinema.org/a/642875.svg)](https://asciinema.org/a/642875)
 
 ## Игра "Простое ли число?"
 ### Описание игры:
 Пользователю показывается случайное число. И ему нужно ответить yes, если число простое, или no — если не простое.
 ### Запуск игры: __"brain-prime"__
-[![asciicast](https://asciinema.org/a/5qtqIrNK65jeOMJXasdOzhXMj.svg)](https://asciinema.org/a/5qtqIrNK65jeOMJXasdOzhXMj)
+[![asciicast](https://asciinema.org/a/642886.svg)](https://asciinema.org/a/642886)
