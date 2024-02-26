@@ -1,15 +1,11 @@
 import rules from '../index.js';
-
-const getRandomInt = (range) => {
-  const randomInt = Math.ceil(Math.random() * range);
-  return randomInt;
-};
+import getRandIntWithout0 from '../getRandIntWithout0.js';
 
 const taskGcd = 'Find the greatest common divisor of given numbers.';
 
 const answerGcd = () => {
-  const randNum1 = getRandomInt(50);
-  const randNum2 = getRandomInt(50);
+  const randNum1 = getRandIntWithout0(50);
+  const randNum2 = getRandIntWithout0(50);
   const smallestInt = Math.sign(randNum1 - randNum2) === 1 ? randNum2 : randNum1;
   const question = `${randNum1} ${randNum2}`;
 

@@ -1,12 +1,13 @@
 import rules from '../index.js';
 import getRandomInt from '../getRandomInt.js';
+import getRandIntWithout0 from '../getRandIntWithout0.js';
 
 const taskProgress = 'What number is missing in the progression?';
 
 const answerProgress = () => {
   const firstNum = getRandomInt(15);
   const missingNum = getRandomInt(10);
-  const difference = Math.ceil(Math.random() * 5);
+  const difference = getRandIntWithout0(5);
 
   const question = [firstNum];
   for (let i = 1; i < 10; i += 1) {
