@@ -1,21 +1,25 @@
 import rules from '../index.js';
 import getRandomInt from '../getRandomInt.js';
-import getRandIntWithout0 from '../getRandIntWithout0.js';
+
+const progress = (firNum, diff, progressLength = 10) => {
+  const arr = [firNum];
+  for (let i = 1; i < progressLength; i += 1) {
+    arr.push(arr[i - 1] + diff);
+  }
+  return arr;
+};
 
 const taskProgress = 'What number is missing in the progression?';
 
 const answerProgress = () => {
-  const firstNum = getRandomInt(15);
-  const missingNum = getRandomInt(10);
-  const difference = getRandIntWithout0(5);
+  const firstNum = getRandomInt(0, 15);
+  const missingNum = getRandomInt(0, 10);
+  const difference = getRandomInt(1, 5);
 
-  const question = [firstNum];
-  for (let i = 1; i < 10; i += 1) {
-    question.push(question[i - 1] + difference);
-  }
+  const question = progress(firstNum, difference);
   question[missingNum] = '..';
 
-  let result = 0;
+  let result;
   let i = 0;
   while (i < question.length) {
     if (question[i] === '..') {
@@ -27,6 +31,7 @@ const answerProgress = () => {
     }
     i += 1;
   }
+
   return [question.join(' '), result.toString()];
 };
 

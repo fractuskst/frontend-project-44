@@ -1,31 +1,36 @@
 import rules from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
+const calculate = (num1, num2, sign) => {
+  let expression = 0;
+  switch (sign) {
+    case '+':
+      expression = num1 + num2;
+      break;
+    case '-':
+      expression = num1 - num2;
+      break;
+    case '*':
+      expression = num1 * num2;
+      break;
+    default:
+      expression = null;
+  }
+  return expression;
+};
+
 const taskCalc = 'What is the result of the expression?';
 
 const answerCalc = () => {
-  const num1 = getRandomInt(25);
-  const num2 = getRandomInt(11);
+  const randNum1 = getRandomInt(0, 25);
+  const randNum2 = getRandomInt(0, 11);
 
   const operators = ['+', '-', '*'];
-  const operator = operators[getRandomInt(3)];
+  const operator = operators[getRandomInt(0, 3)];
 
-  const question = `${num1} ${operator} ${num2}`;
+  const question = `${randNum1} ${operator} ${randNum2}`;
 
-  let result = 0;
-  switch (operator) {
-    case '+':
-      result = num1 + num2;
-      break;
-    case '-':
-      result = num1 - num2;
-      break;
-    case '*':
-      result = num1 * num2;
-      break;
-    default:
-      result = null;
-  }
+  const result = calculate(randNum1, randNum2, operator);
 
   return [question, result.toString()];
 };
