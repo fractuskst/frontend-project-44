@@ -26,7 +26,7 @@ const answerCalc = () => {
   const randNum2 = getRandomInt(0, 11);
 
   const operators = ['+', '-', '*'];
-  const operator = operators[getRandomInt(0, 3)];
+  const operator = operators[getRandomInt(0, 2)];
 
   const question = `${randNum1} ${operator} ${randNum2}`;
 
