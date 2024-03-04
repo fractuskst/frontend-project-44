@@ -13,7 +13,7 @@ const taskProgress = 'What number is missing in the progression?';
 
 const answerProgress = () => {
   const firstNum = getRandomInt(0, 15);
-  const missingNum = getRandomInt(0, 10);
+  const missingNum = getRandomInt(0, 9);
   const difference = getRandomInt(1, 5);
 
   const question = progress(firstNum, difference);
