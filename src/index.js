@@ -9,10 +9,10 @@ const rules = (task, answer) => {
   console.log(task);
 
   for (let i = 0; i < 3; i += 1) {
-    const questionAndCorrectAnswer = answer();
-    console.log(`Question: ${questionAndCorrectAnswer[0]}`);
+    const [question, result] = answer();
+    console.log(`Question: ${question}`);
 
-    const correctAnswer = questionAndCorrectAnswer[1];
+    const correctAnswer = result;
 
     const userAnswer = readlineSync.question('Your answer: ');
 
@@ -21,12 +21,10 @@ const rules = (task, answer) => {
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       console.log(`Let's try again, ${name}!`);
-      break;
-    }
-    if (i === 2) {
-      console.log(`Congratulations, ${name}!`);
+      return;
     }
   }
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default rules;
