@@ -1,23 +1,23 @@
-import rules from '../index.js';
+import startGame from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
-const isEven = (num) => {
-  const result = (num % 2 === 0 ? 'yes' : 'no');
+const isEven = (number) => {
+  const result = (number % 2 === 0);
   return result;
 };
 
 const taskEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const answerEven = () => {
-  const randomNum = getRandomInt(0, 100);
+  const number = getRandomInt(0, 100);
 
-  const result = isEven(randomNum);
+  const result = isEven(number) ? 'yes' : 'no';
 
-  return [randomNum, result];
+  return [number, result];
 };
 
 const even = () => {
-  rules(taskEven, answerEven);
+  startGame(taskEven, answerEven);
 };
 
 export default even;

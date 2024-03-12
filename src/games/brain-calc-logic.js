@@ -1,42 +1,38 @@
-import rules from '../index.js';
+import startGame from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
-const calculate = (num1, num2, sign) => {
-  let expression = 0;
+const operators = ['+', '-', '*'];
+
+const calculate = (number1, number2, sign) => {
   switch (sign) {
     case '+':
-      expression = num1 + num2;
-      break;
+      return number1 + number2;
     case '-':
-      expression = num1 - num2;
-      break;
+      return number1 - number2;
     case '*':
-      expression = num1 * num2;
-      break;
+      return number1 * number2;
     default:
-      expression = null;
+      throw new Error(`Unknown sign: '${sign}'!`);
   }
-  return expression;
 };
 
 const taskCalc = 'What is the result of the expression?';
 
 const answerCalc = () => {
-  const randNum1 = getRandomInt(0, 25);
-  const randNum2 = getRandomInt(0, 11);
+  const number1 = getRandomInt(0, 25);
+  const number2 = getRandomInt(0, 11);
 
-  const operators = ['+', '-', '*'];
   const operator = operators[getRandomInt(0, 2)];
 
-  const question = `${randNum1} ${operator} ${randNum2}`;
+  const question = `${number1} ${operator} ${number2}`;
 
-  const result = calculate(randNum1, randNum2, operator);
+  const result = calculate(number1, number2, operator);
 
   return [question, result.toString()];
 };
 
 const calc = () => {
-  rules(taskCalc, answerCalc);
+  startGame(taskCalc, answerCalc);
 };
 
 export default calc;
